@@ -113,7 +113,7 @@
                   <Font name="Comic Sans MS" size="26.0" />
                </font>
             </Label>
-            <Button fx:id="delete" layoutX="267.0" layoutY="258.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3EBD3;" text="Удалить">
+            <Button fx:id="delete" layoutX="267.0" layoutY="258.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3EBD3;" text="Удалить">
                <font>
                   <Font name="Comic Sans MS Italic" size="14.0" />
                </font>

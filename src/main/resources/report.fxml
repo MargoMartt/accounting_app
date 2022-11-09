@@ -96,8 +96,8 @@
             </Label>
             <TableView fx:id="report" layoutX="126.0" layoutY="88.0" prefHeight="225.0" prefWidth="458.0">
               <columns>
-                <TableColumn prefWidth="338.0" text="ФИО сотрудника" />
-                <TableColumn prefWidth="119.0" text="Зарплата" />
+                <TableColumn prefWidth="338.0" text="ФИО сотрудника" fx:id="surnameColumn"/>
+                <TableColumn prefWidth="119.0" text="Зарплата" fx:id="salaryColumn"/>
               </columns>
             </TableView>
             <ScrollBar layoutX="584.0" layoutY="88.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="14.0" />

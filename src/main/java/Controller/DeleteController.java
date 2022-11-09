@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.DB.AccountingEntity;
+import org.example.DB.AccountingService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -41,6 +43,12 @@ public class DeleteController {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
+    }
+    @FXML
+    void onDeleteButtonClick(ActionEvent event) throws IOException {
+        AccountingService accountingService = new AccountingService();
+        AccountingEntity accounting = accountingService.findEmployee(Integer.parseInt(id.getText()));
+        accountingService.deleteEmployee(accounting);
     }
 
     @FXML

@@ -24,7 +24,7 @@ public class AccountingService {
         accountingDao.update(accounting);
     }
 
-    public ArrayList<AccountingEntity> findAllPets() {
+    public ArrayList<AccountingEntity> findAllEmployees() {
         return accountingDao.findAll();
     }
 }

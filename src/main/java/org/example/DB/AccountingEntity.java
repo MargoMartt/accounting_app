@@ -69,7 +69,7 @@ public class AccountingEntity {
     }
 
     public double getSalaryPerDay() {
-        return salaryPerDay;
+        return this.salaryPerDay;
     }
 
     public void setSalaryPerDay(double salaryPerDay) {
@@ -77,7 +77,7 @@ public class AccountingEntity {
     }
 
     public int getWorkingDays() {
-        return workingDays;
+        return this.workingDays;
     }
 
     public void setWorkingDays(int workingDays) {

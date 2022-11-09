@@ -9,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.DB.AccountingEntity;
+import org.example.DB.AccountingService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,6 +50,13 @@ public class SalaryController {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
+    }
+    public void onSalaryButtonClick(ActionEvent actionEvent) {
+        AccountingService accountingService = new AccountingService();
+        AccountingEntity accounting = accountingService.findEmployee(Integer.parseInt(id.getText()));
+        double sal = accounting.getSalaryPerDay()*Double.parseDouble(String.valueOf(accounting.getWorkingDays()));
+        salary.setText(String.valueOf(sal)+" $");
+        surname.setText(accounting.getEmployeesSurname());
     }
 
     @FXML

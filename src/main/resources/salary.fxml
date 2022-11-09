@@ -100,7 +100,7 @@
                   <Font name="Comic Sans MS" size="26.0" />
                </font>
             </Label>
-            <Button fx:id="calculate" layoutX="248.0" layoutY="172.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3EBD3;" text="Рассчитать">
+            <Button fx:id="calculate" layoutX="248.0" layoutY="172.0" mnemonicParsing="false" onAction="#onSalaryButtonClick" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3EBD3;" text="Рассчитать">
                <font>
                   <Font name="Comic Sans MS Italic" size="14.0" />
                </font>
