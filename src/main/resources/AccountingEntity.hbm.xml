@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.DB.AccountingEntity" table="accounting" schema="labsdb">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="employeesSurname">
+            <column name="employees_surname" sql-type="varchar(255)"/>
+        </property>
+        <property name="employeesName">
+            <column name="employees_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="employeesLastname">
+            <column name="employees_lastname" sql-type="varchar(255)"/>
+        </property>
+        <property name="salaryPerDay">
+            <column name="salary_per_day" sql-type="double" precision="-1"/>
+        </property>
+        <property name="workingDays">
+            <column name="working_days" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>
