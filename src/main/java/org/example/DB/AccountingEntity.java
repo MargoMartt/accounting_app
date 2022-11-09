@@ -5,6 +5,16 @@ import javax.persistence.*;
 @Entity
 @Table(name = "accounting", schema = "labsdb", catalog = "")
 public class AccountingEntity {
+    private double salary;
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
     public AccountingEntity(String employeesSurname, String employeesName, String employeesLastname, double salaryPerDay, int workingDays) {
         this.employeesSurname = employeesSurname;
         this.employeesName = employeesName;

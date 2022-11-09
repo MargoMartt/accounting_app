@@ -1,4 +1,5 @@
 package Controller;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +25,10 @@ public class ReportController {
     @FXML
     private TableColumn<AccountingEntity, Double> salaryColumn;
     @FXML
+    private TableColumn<AccountingEntity, String> nameColumn;
+    @FXML
+    private TableColumn<AccountingEntity, String> lastnameColumn;
+    @FXML
     private Button main;
 
     @FXML
@@ -41,17 +46,23 @@ public class ReportController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
     @FXML
     void initialize() {
         initData();
         surnameColumn.setCellValueFactory(new PropertyValueFactory<AccountingEntity, String>("employeesSurname"));
-        salaryColumn.setCellValueFactory(new PropertyValueFactory<AccountingEntity, Double>("salaryPerDay"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<AccountingEntity, String>("employeesName"));
+        lastnameColumn.setCellValueFactory(new PropertyValueFactory<AccountingEntity, String>("employeesLastname"));
+        salaryColumn.setCellValueFactory(new PropertyValueFactory<AccountingEntity, Double>("salary"));
         report.setItems(salaryList);
+
     }
-    private void initData(){
+
+    private void initData() {
         AccountingService accountingService = new AccountingService();
-        ArrayList<AccountingEntity> employees= accountingService.findAllEmployees();
+        ArrayList<AccountingEntity> employees = accountingService.findAllEmployees();
         for (int i = 0; i < employees.size(); i++) {
+            employees.get(i).setSalary(employees.get(i).getSalaryPerDay() * Double.parseDouble(String.valueOf(employees.get(i).getWorkingDays())));
             salaryList.add(employees.get(i));
         }
     }

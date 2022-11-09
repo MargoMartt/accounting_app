@@ -39,4 +39,5 @@ public class AccountingDao {
         return (ArrayList<AccountingEntity>) HibernateSessionFactory.getSessionFactory().openSession().createQuery("from AccountingEntity ").list();
 
     }
+
 }
